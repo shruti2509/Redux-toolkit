@@ -14,9 +14,10 @@ function Todos() {
     const dispatch = useDispatch()
   return (
    <>
-   <h1>data</h1>
+   <strong><h4>Todo List</h4></strong>
    {todos.map((todo) => (
-    <div key ={todo.id}>{todo.text} <button onClick={() => dispatch(removeTodo(todo.id6))}>delete</button></div>
+    <div className='text-white'> <li className='mt-4 flex justify-between items-center bg-zinc-800 px-4 py-2 rounded' key ={todo.id}><div>{todo.text}</div>  
+    <button className='text-white bg-red-500 border-0 py-1 px-4 focus: outline-none hover: bg-red-600 rounded text-md' onClick={() => dispatch(removeTodo(todo.id))} >delete</button></li></div>
     
    ))}
    </>
